@@ -27,7 +27,7 @@ public class DeviceWindow extends Window
     protected void Display()
     {
         ImGui.text(device.getPort().getSystemPortPath());
-        
+
         if (ImGui.collapsingHeader("Compatibility", ImGuiTreeNodeFlags.DefaultOpen))
         {
 

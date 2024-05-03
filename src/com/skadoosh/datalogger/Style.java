@@ -3,7 +3,6 @@ package com.skadoosh.datalogger;
 import imgui.ImColor;
 import imgui.ImGui;
 import imgui.ImGuiStyle;
-import imgui.ImVec4;
 import imgui.flag.ImGuiCol;
 
 public final class Style

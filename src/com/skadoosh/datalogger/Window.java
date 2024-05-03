@@ -11,15 +11,19 @@ public abstract class Window
     {
         open = new ImBoolean(true);
     }
-
     
     public static void DisplayWindow(Window window)
     {
-        if (window.open.get() && ImGui.begin(window.getName(), window.open))
+        if (!window.open.get())
+        {
+            return;
+        }
+
+        if (ImGui.begin(window.getName(), window.open))
         {
             window.Display();
-            ImGui.end();
         }
+        ImGui.end();
     }
     
     public void Open()
@@ -30,6 +34,11 @@ public abstract class Window
     public void Close()
     {
         open.set(false);
+    }
+
+    public boolean IsOpen()
+    {
+        return open.get();
     }
 
     protected abstract String getName();

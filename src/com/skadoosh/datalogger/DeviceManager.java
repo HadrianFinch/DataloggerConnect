@@ -68,7 +68,7 @@ public class DeviceManager
     {
         for (Device device : devices)
         {
-            device.ProcessInput();
+            device.ReadSerialPort();
         }
     }
 }

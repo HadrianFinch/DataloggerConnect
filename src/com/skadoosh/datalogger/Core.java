@@ -1,12 +1,10 @@
 package com.skadoosh.datalogger;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import imgui.ImGui;
-import imgui.ImVec2;
-import imgui.flag.ImGuiStyleVar;
 import imgui.flag.ImGuiTreeNodeFlags;
-import imgui.flag.ImGuiWindowFlags;
 
 public class Core
 {
@@ -106,7 +104,7 @@ public class Core
 
 
         Window.DisplayWindow(devicesWindow);
-        
+
 
         for (DeviceWindow deviceWindow : deviceWindows)
         {
